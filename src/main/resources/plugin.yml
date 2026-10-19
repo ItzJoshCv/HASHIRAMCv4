@@ -1,0 +1,23 @@
+name: HASHIRAMCv2
+version: 1.0.0
+main: com.kodari.hashiramcv2.HashiramcV2Plugin
+api-version: '1.21'
+author: Kodari
+description: Tótems, objetos de mano secundaria y katana inspirados en Demon Slayer.
+softdepend: [Vault]
+commands:
+  offhands:
+    description: Consulta y entrega los objetos especiales de HASHIRAMCv2.
+    usage: /offhands [give <jugador> <objeto>]
+  corazon:
+    aliases: [corazones]
+    description: Administra corazones permanentes y temporales.
+    usage: /corazon <give|take|info> <jugador> <cantidad> [permanente|temporal] [minutos]
+  misiones:
+    aliases: [mision]
+    description: Muestra tus misiones de caza y recompensas.
+    usage: /misiones
+permissions:
+  hashiramcv2.admin:
+    description: Permite entregar los objetos de HASHIRAMCv2.
+    default: op

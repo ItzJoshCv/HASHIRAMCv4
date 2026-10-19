@@ -1,0 +1,60 @@
+red-moon:
+  enabled: true
+  # Usa CHANCE para una probabilidad por noche o EVERY_N_DAYS para un intervalo fijo.
+  trigger: CHANCE
+  chance-per-night: 0.20
+  every-game-days: 7
+  start-message: "&c☾ La Luna Roja ha comenzado en {world}. Los demonios se fortalecen."
+  end-message: "&7☾ La Luna Roja ha terminado en {world}."
+
+demon-damage:
+  multiplier: 2.0
+  only-during-red-moon: false
+
+hearts:
+  default-temporary-minutes: 60
+
+missions:
+  demon-hunt:
+    name: "&cCazador de demonios"
+    type: DEMON_KILLS
+    amount: 10
+    reward: 500.0
+  subboss-hunt:
+    name: "&4Caza del subjefe"
+    type: DEMON_ID
+    target: wolf_pack_subboss
+    amount: 1
+    reward: 1000.0
+  player-bounty:
+    name: "&6Recompensa por cabeza"
+    type: PLAYER_KILL
+    target: NombreDelJugador
+    amount: 1
+    reward: 750.0
+
+demons:
+  nether-wither-skeleton-chance: 0.035
+  night-packs:
+    enabled: true
+    check-interval-ticks: 100
+    chance-per-player-check: 0.06
+    cooldown-ticks: 1200
+    max-active-packs-per-world: 3
+    pack-size: 4
+    spawn-radius: 24
+    common-entity: ZOMBIE
+    subboss-entity: HUSK
+    common-health: 28.0
+    common-damage: 6.0
+    subboss-health: 80.0
+    subboss-damage: 12.0
+    common-name: "&2Demonio Venenoso"
+    subboss-name: "&4Subjefe de la Manada &c✦"
+    poison-duration-ticks: 60
+    poison-amplifier: 0
+    spit-range: 12.0
+    poison-spit-cooldown-ticks: 100
+    rewards:
+      money: 300.0
+      experience: 150
